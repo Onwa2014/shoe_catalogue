@@ -1,0 +1,31 @@
+.container {
+  text-align: center;
+  align-content: center;
+}
+.logo {
+  height: 6em;
+  /*background-color: grey;*/
+}
+.search {
+
+}
+th, td {
+    /*margin:auto;*/*/
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    width: 15em;
+}
+
+tr:hover{
+  background-color:#f5f5f5
+}
+. output {
+  width:20em;
+}
+#addSpace {
+  display:none;
+}
+/*.show {
+  display:inline;
+}*/

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shoe Catalogue</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+  </head>
+  <body>
+    <div class = "container">
+      <h1>Milonie's Shoeniverse</h1>
+      <img src="logo.jpg" class="logo">
+      <h5>From heels to flip flops</h5>
+      <div id= "addSpace">
+
+        Color: <input type="text" class="addColor"></input>
+        Brand: <input type="text" class="addBrand"></input>
+        Size: <input type="text" class="addSize"></input>
+        Quantity: <input type="text"class="addStock"></input>
+        Price: <input type="text" class="addPrice"></input>
+        <input type="button" value="Submit" class="submit"></input>
+      </div>
+      <div class="filter">
+      <select class ="color">
+      </select>
+      <select class ="size">
+      </select>
+      <select class ="brand">
+      </select>
+
+        <input type="button" value="Search" class="search">
+        <input type="button" value="Add Stock" class="add">
+      </div>
+
+    <script type="text/handlebars-x" class="myDropDwnTemplate">
+    <option value="all">All</option>
+    {{#each data}}
+    <option value="{{this}}">{{this}}</option>
+    {{/each}}
+    </script>
+<script type="text/handlebars-x" class="myTemplate">
+    <table class="shoeTable">
+        <tr>
+          <th>Brand</th>
+          <th>Color</th>
+          <th>Size</th>
+          <th>Quatity</th>
+          <th>Price</th>
+        </tr>
+        {{#each matchingShoesKey}}
+        <tr>
+          <td>{{this.brand}}</td>
+          <td>{{this.color}}</td>
+          <td>{{this.size}}</td>
+          <td>{{this.no_stock}}</td>
+          <td>R{{this.price}}</td>
+        </tr>
+        {{/each}}
+    </table>
+  </script>
+
+  <div class="output">
+  </div>
+    <script src="index.js"></script>
+  </body>
+</html>
